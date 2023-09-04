@@ -10,7 +10,8 @@ on:
       - main
 
 jobs:
-  my_testing runs-on: ubuntu-latestzccc
+  my_testing: 
+    runs-on: ubuntu-latest
     
     steps:
     - name: Print Hello Massege in TEsting
