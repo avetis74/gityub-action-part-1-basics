@@ -16,13 +16,20 @@ jobs:
     steps:
     - name: Print Hello Massege in TEsting
       run : echo "Hello World from testing job"
+   
     - name: Execute few commands
       run : |
         echo "Hello Message1"
         echo "Hello ApplicationName: ${{ env.APPLICATION_NAME }}"
+   
+    - name: List_2 current folder
+      run : ls -la
+    
+    - name: git clone my Repo
+      uses: actions/checkout@v1
+    
     - name: List current folder
       run : ls -la
-      
 
 
     
@@ -33,8 +40,14 @@ jobs:
     steps:
     - name: Print Hello Massege in Deploy
       run : echo "Hello World from deploy job"
+   
     - name: Execute several commands
       run : |
         echo "Deploy package 1"
         echo "Deploy package name ${{ env.PACKAGE_NAME }}"
     
+    - name: Lets test some packages if the are here 1
+      run : aws --version
+   
+    - name: Lets test some packages if the are here 2
+      run : zip
